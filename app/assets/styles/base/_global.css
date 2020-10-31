@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+    background-color: pink;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+

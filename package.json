@@ -1,0 +1,38 @@
+{
+  "name": "HallwayHelper",
+  "version": "1.0.0",
+  "description": "Gives an at a glance view of bus stop times and weather to assist when getting ready to go out.",
+  "author": "leblox",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "babel-loader": "^8.1.0",
+    "lazysizes": "^5.2.2",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "autoprefixer": "^9.8.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.1",
+    "cssnano": "^4.1.10",
+    "fs-extra": "^9.0.1",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "postcss-hexrgba": "^2.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-mixins": "^6.2.3",
+    "postcss-nested": "^4.2.3",
+    "postcss-simple-vars": "^5.0.2",
+    "source-map-loader": "^1.1.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
