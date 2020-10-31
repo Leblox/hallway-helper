@@ -42,5 +42,5 @@ const controlQuote = async () => {
     }
 }
 
-//controlSearch();
-controlQuote();
+controlSearch();
+//controlQuote();
