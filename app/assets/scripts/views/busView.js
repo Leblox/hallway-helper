@@ -2,7 +2,7 @@ import { elements } from './base';
 
 export const renderBuses = (buses) => {
     // Render each bus in the array on the UI
-    console.log("Started renderBuses");
+    //console.log("Started renderBuses");
 
     buses.forEach(bus => {
         renderBus(bus);

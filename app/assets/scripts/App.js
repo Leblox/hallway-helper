@@ -11,7 +11,9 @@ if (module.hot) {
 
 import Buses from './models/Buses';
 import Quote from './models/Quote';
+import Weather from './models/Weather';
 import * as busView from './views/busView';
+import * as weatherView from './views/weatherView';
 
 const state = {};
 
@@ -42,5 +44,20 @@ const controlQuote = async () => {
     }
 }
 
-controlSearch();
+const controlWeather = async () => {
+    state.weather = new Weather();
+
+    try {
+        await state.weather.getWeather();
+        //console.log(state.weather.forecast.weather);
+        weatherView.clearWeather();
+        weatherView.renderWeather(state.weather.forecast.weather);
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+//controlSearch();
 //controlQuote();
+controlWeather();
