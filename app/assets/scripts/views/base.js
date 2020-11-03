@@ -1,6 +1,7 @@
 export const elements = {
-    arrivalContainer: document.querySelector('.arrivals'),
+    timeSection: document.querySelector('.time'),
     weatherSection: document.querySelector('.weather'),
     quoteSection: document.querySelector('.quote'),
-    timeSection: document.querySelector('.time')
+    arrivalContainer: document.querySelector('.arrivals_busses'),
+    busStopName: document.querySelector('.arrivals__stop-name'),
 };

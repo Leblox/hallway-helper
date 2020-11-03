@@ -1,6 +1,8 @@
 .arrivals {
     margin: 1rem 0.5rem;
     padding: 1rem 0.5rem; 
+    position: absolute;
+    bottom: 10px;
     
     background-color: $busBackground;
     border-radius: 15px;
@@ -25,22 +27,24 @@
         &__lineNumber {
             display: inline-block;
             font-size: 2rem;
-            color: $busNumberTextColor;
             padding: 4px;
+            width: 70px;
+            text-align: center;
+            color: $busNumberTextColor;
             border: 1px solid $busNumber;
             background-color: $busNumber;
             border-radius: 10px;
         }
 
         &__destination {
-            margin-left: 1rem;
             display: inline-block;
             text-transform: capitalize;
+            width: 130px;
+            margin-left: 0.5rem;
         }
 
         &__time {
             display: inline-block;
-            margin-left: 6rem;
         }
     }
     

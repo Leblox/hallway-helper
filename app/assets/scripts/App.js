@@ -4,7 +4,7 @@ if (module.hot) {
     module.hot.accept()
   }
 
-// *********************************
+// *******************************
 // APPLICATION
 // *********************************
 
@@ -24,16 +24,20 @@ const controlSearch = async () => {
     state.buses = new Buses();
 
     try {
-        // Get arrival data from API
+        // Get arrival data from AI
         await state.buses.getArrivals();
-        //console.log(state.buses.arrivalData);
+        
+        // Render station name and destinations
+        //console.log(state.buses.busStopName);
+        busView.clearBusStopName();
+        busView.renderStopName(state.buses.busStopName);
 
         // Clear old data from UI and render results
         busView.clearBuses();
-        busView.renderBuses(state.buses.arrivalData);
+        busView.renderBusTimes(state.buses.arrivalData);
     
     } catch (error) {
-        console.log('Something went wrong with the search.');
+        console.log(error);
     }
 }
 
@@ -74,6 +78,6 @@ const controlTime = () => {
 }
 
 controlSearch();
-// controlQuote();
-// // controlWeather();
-// controlTime();
+controlQuote();
+// controlWeather();
+controlTime();

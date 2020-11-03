@@ -1,7 +1,10 @@
 .time {
+    /*
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    padding: 1rem 0;
+    */
+    float: left;
+    padding: 1rem 1rem;
     font-size: 1.6rem;
 }
