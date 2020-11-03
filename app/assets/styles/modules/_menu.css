@@ -1,0 +1,9 @@
+.menu {
+
+    &__icon {
+        font-size: 2rem;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+}

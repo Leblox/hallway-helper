@@ -14,6 +14,9 @@ import Quote from './models/Quote';
 import Weather from './models/Weather';
 import * as busView from './views/busView';
 import * as weatherView from './views/weatherView';
+import * as quoteView from './views/quoteView';
+import * as timeView from './views/timeView';
+import Time from './models/Time';
 
 const state = {};
 
@@ -23,7 +26,7 @@ const controlSearch = async () => {
     try {
         // Get arrival data from API
         await state.buses.getArrivals();
-        console.log(state.buses.arrivalData);
+        //console.log(state.buses.arrivalData);
 
         // Clear old data from UI and render results
         busView.clearBuses();
@@ -39,6 +42,10 @@ const controlQuote = async () => {
 
     try {
         await state.quote.getQuote();
+
+        //console.log(state.quote);
+        quoteView.renderQuote(state.quote.affirmation);
+
     } catch {
         console.log("Something went wrong with the Quote.")
     }
@@ -58,6 +65,15 @@ const controlWeather = async () => {
     }
 }
 
-//controlSearch();
-//controlQuote();
-controlWeather();
+const controlTime = () => {
+    state.time = new Time();
+
+    // Updates the time every 15 seconds
+    setInterval(state.time.getTime(), 10000);
+    setInterval(timeView.renderTime(state.time.time), 10000);
+}
+
+controlSearch();
+// controlQuote();
+// // controlWeather();
+// controlTime();

@@ -2,15 +2,16 @@ import axios from 'axios';
 
 export default class Quote {
     constructor() {
-        this.quote;
+        this.affirmation;
     }
 
     async getQuote() {
         try {
-            result = await axios (`https://www.affirmations.dev`);
+            let proxy = "https://cors-anywhere.herokuapp.com/"
+            let result = await axios (`${proxy}https://www.affirmations.dev`);
 
-            this.quote = result.affirmation;
-            console.log(this.quote);
+            this.affirmation = result.data.affirmation;
+            //console.log(this.quote);
         } catch (error) {
             console.log(error);
         }

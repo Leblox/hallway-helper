@@ -5,8 +5,19 @@
     </head>
     <body class="">
         <section class="container">
-            <div class="weather"></div>
+            <div class="text-container">
+                <nav>
+                    <ion-icon class="menu__icon" name="ellipsis-vertical-sharp"></ion-icon>
+                </nav>
+                <div class="time">13:25</div>
+                <div class="weather">
+                    <ion-icon class="weather__icon" name="sunny-outline"></ion-icon>
+                    <p class="weather__text">Sunny, 15*C</p>
+                </div>
+                <div class="quote">Whenever we’re afraid, it’s because we don’t know enough. If we understood enough, we would never be afraid</div>
+            </div>
             <div class="arrivals">
+                <div class="arrivals__stop-name">Melville Gardens</div>
                 <div class="arrivals__bus">
                     <div class="arrivals__bus__lineNumber">32</div>
                     <div class="arrivals__bus__destination">Brent Cross</div>
@@ -14,5 +25,6 @@
                 </div>
             </div>
         </section>
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </body>
 </html>

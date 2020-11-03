@@ -1,21 +1,35 @@
 .arrivals {
-    padding: 1rem 0.5rem;
-
-    width: 100%;
-    height: auto;
-    background-color: magenta;
+    margin: 1rem 0.5rem;
+    padding: 1rem 0.5rem; 
+    
+    background-color: $busBackground;
+    border-radius: 15px;
+    
+    &__stop-name {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    &__bus::before{
+        display: block;
+        height: 1px;
+        background-color: white;
+        content: "";
+        width: 60%;
+        margin: 0.5rem auto 0.5rem auto;
+    }   
 
     &__bus {
         display: block;
 
+
         &__lineNumber {
             display: inline-block;
             font-size: 2rem;
-            color: white;
+            color: $busNumberTextColor;
             padding: 4px;
-            border: 1px solid red;
-            background-color: red;
-            border-radius: 50%;
+            border: 1px solid $busNumber;
+            background-color: $busNumber;
+            border-radius: 10px;
         }
 
         &__destination {

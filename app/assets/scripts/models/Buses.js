@@ -10,7 +10,7 @@ export default class Buses {
         try {
             // Request data from TFL Api for the stop in question, only buses
             const result = await axios (`https://api.tfl.gov.uk/StopPoint/${this.busStopID}/Arrivals?mode=bus`);
-    
+            console.log(result);
             result.data.forEach((el) => {
                 let bus = {
                     lineName: el.lineName, 
