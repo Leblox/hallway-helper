@@ -12,7 +12,8 @@ body {
     /* font-family: 'Playfair Display', serif; */
     font-family: 'Raleway', sans-serif;
     overflow-x: hidden;
-    background-color: pink;
+    background-color: $bodyBackground;
+    color: $mainTextColor;
 }
 
 img {

@@ -3,16 +3,25 @@
     left: 50%;
     transform: translate(-50%);
     padding: 3rem 0;
+    width: 90%;
     
     &__icon {
         height: 8rem;
         width: 8rem;
+        display: inline-block;
     }
 
     &__text {
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 1.4rem;
+        display: inline-block;
+        font-size: 1.2rem;
         padding: 0.5rem 0;
+
+        &__temp {
+            font-size: 4.5rem;
+        }
+
+        &__desc {
+            padding-left: 1.1rem;
+        }
     }
 }

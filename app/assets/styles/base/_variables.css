@@ -1,4 +1,13 @@
-$appBackground: #D8E6E7;
-$busBackground: #9DC3C1;
-$busNumber: green;
-$busNumberTextColor: white;
+/* Body/global styles */
+$bodyBackground: rgb(219, 219, 219);
+$mainTextColor: rgb(218, 216, 216);
+
+/* App container */
+$appBackground: rgb(41,50,181);
+$appBackgroundbright: rgb(61, 112, 189);
+
+/* Bus section */
+$busBackground: rgb(0, 0, 0, 0.25);
+$busNumber:  rgb(0, 0, 0, 0.40);;
+$busNumberTextColor: $mainTextColor;
+
