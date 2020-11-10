@@ -1,4 +1,5 @@
 .container {
+    position: relative;
     width: 375px;
     height: 667px;
     border: 1px solid gray;
@@ -6,13 +7,5 @@
     margin: 2rem auto;
     box-shadow: 5px 5px 32px 3px hsla(0, 0%, 0%, 0.71);
     background: linear-gradient(to bottom, $appBackground, $appBackgroundbright);
-    
-    /*
-    background-image: linear-gradient($appBackground, $appBackgroundbright);
-    background-color: $appBackground;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
-    */
-    
-    position: relative;
     
 }

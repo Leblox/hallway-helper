@@ -9,11 +9,59 @@ export default class Buses {
         this.arrivalData = [];
     }
 
+    async findStopName(stopNameQuery) {
+        try {
+            const result = await axios (`https://api.tfl.gov.uk/Stoppoint/Search/'${stopNameQuery}'?modes=bus`);
+            //console.log(result);
+            console.log(result);
+
+            // If nothing was found using that query
+            if (result.data.total == 0) {
+                console.log("Couldnt find a stop with that name");
+                return [{name: "Please check the name and try again", id: 0}];
+            }
+
+            // If something was found, loop over the available stops and take the info
+            let chooseStop = [];
+            result.data.matches.forEach( el => chooseStop.push({name: el.name, id: el.id}));
+            console.log(chooseStop);
+
+            return chooseStop;
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async findBusStopDirection(id) {
+        
+        try {
+            const result = await axios (`https://api.tfl.gov.uk/Stoppoint/${id}`);
+            console.log(result);
+
+            console.log(result.data.children)
+
+            let stopOptions = [];
+            result.data.children.forEach(el => stopOptions.push({
+                name: el.commonName,
+                id: el.id,
+                lines: el.lines,
+                lat: el.lat,
+                lon: el.lon
+            }));
+            console.log(stopOptions);
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
     async getArrivals() {
         try {
             // Request data from TFL Api for the stop in question, only buses
             const result = await axios (`https://api.tfl.gov.uk/StopPoint/${this.busStopID}/Arrivals?mode=bus`);
-            console.log(result);
+            //console.log(result);
 
             // Set bus stop name and destination(s) served
             this.busStopName = result.data[0].stationName;
