@@ -1,10 +1,18 @@
 export const elements = {
     timeSection: document.querySelector('.time'),
-    weatherSection: document.querySelector('.weather'),
     quoteSection: document.querySelector('.quote'),
+    
+    // Weather section
+    weatherSection: document.querySelector('.weather'),
+    weatherIcon: document.querySelector('.weather__icon-wrapper'),
+    weatherTemp: document.querySelector('.weather__text__temp'),
+    weatherDesc: document.querySelector('.weather__text__desc'),
+
+    // Bus arrivals section
     arrivalContainer: document.querySelector('.arrivals_busses'),
     busStopName: document.querySelector('.arrivals__stop-name'),
 
+    // Setting menu
     busSearchForm: document.querySelector('.settings-menu__bus-search-form'),
     busSearchInput: document.querySelector('.settings-menu__bus-search-form__input'),
     settingsNameSearchResult: document.querySelector('.settings-menu__bus-search-name-results')

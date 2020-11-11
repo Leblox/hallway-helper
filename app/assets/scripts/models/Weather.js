@@ -12,6 +12,8 @@ export default class Weather {
 
             let result = await axios(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`);
 
+            //console.log(result);
+
             this.forecast = result.data.dataseries[0];
             //console.log(this.weather);
 
