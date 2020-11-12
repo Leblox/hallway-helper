@@ -2,18 +2,18 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    padding: 3rem 0;
+    padding: 5rem 0;
     width: 90%;
     
     &__icon-wrapper {
         display: inline-block;
+        margin-right: 10px;
+        margin-left: 1.7rem;
     }
 
     &__icon {
         height: 8rem;
         width: 8rem;
-        margin-right: 10px;
-        fill: white;
     }
 
     &__text {

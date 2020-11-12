@@ -1,8 +1,14 @@
 .arrivals {
-    margin: 1rem 0.5rem;
-    padding: 1rem 0.5rem; 
     position: absolute;
-    bottom: 10px;
+    width: 90%;
+    left: 5%;
+    bottom: 1rem;
+    padding: 1rem 0.5rem; 
+    
+    
+    max-height: 15rem;
+    overflow-y: auto;
+    
     
     background-color: $busBackground;
     border-radius: 15px;
@@ -10,11 +16,13 @@
     &__stop-name {
         font-size: 1rem;
         font-weight: 600;
+        margin-left: 0.5rem;
     }
+
     &__bus::before{
         display: block;
         height: 1px;
-        background-color: white;
+        background-color: $mainTextColor;
         content: "";
         width: 60%;
         margin: 0.5rem auto 0.5rem auto;
@@ -22,7 +30,6 @@
 
     &__bus {
         display: block;
-
 
         &__lineNumber {
             display: inline-block;
@@ -34,17 +41,22 @@
             border: 1px solid $busNumber;
             background-color: $busNumber;
             border-radius: 10px;
+            
         }
 
         &__destination {
             display: inline-block;
             text-transform: capitalize;
-            width: 130px;
+            width: 100px;
             margin-left: 0.5rem;
+                     
         }
 
         &__time {
             display: inline-block;
+            margin-top: 1.3rem;
+            margin-right: 0.5rem;
+            float: right;          
         }
     }
     

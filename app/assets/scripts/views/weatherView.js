@@ -1,8 +1,6 @@
 import { elements } from './base';
 
 export const renderWeather = forecast => {
-    console.log(forecast.weather);
-
     let weatherIconMarkup = `
         <img class="weather__icon" src='./assets/images/${forecast.weather}.svg' style="fill: #ffffff;" alt="Symbol for '${weatherOptions[forecast.weather]}' weather">
     `;

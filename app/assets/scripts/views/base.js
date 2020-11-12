@@ -1,4 +1,5 @@
 export const elements = {
+    generalContainer: document.querySelector('.container'),
     timeSection: document.querySelector('.time'),
     quoteSection: document.querySelector('.quote'),
     
@@ -13,13 +14,17 @@ export const elements = {
     busStopName: document.querySelector('.arrivals__stop-name'),
 
     // Setting menu
+    toggleSettingsMenuButton: document.querySelector('.settings-menu__toggle-button'),
+    settingsMenuSection: document.querySelector('.settings-menu'),
     busSearchForm: document.querySelector('.settings-menu__bus-search-form'),
     busSearchInput: document.querySelector('.settings-menu__bus-search-form__input'),
-    settingsNameSearchResult: document.querySelector('.settings-menu__bus-search-name-results')
+    settingsNameSearchResult: document.querySelector('.settings-menu__bus-search-name-results'),
+    stopOptions: document.querySelector('.settings-menu__bus-selection')
 };
 
 export const elementStrings = {
-    loader: 'loader'
+    loader: 'loader',
+    busStopSearchResults: 'settings-menu__bus-search-stop'
 };
 
 export const renderLoader = parent => {

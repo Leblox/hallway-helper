@@ -1,22 +1,21 @@
 .settings-menu {
     visibility: hidden;
-
-    
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 5;
+    z-index: 3;
     border-radius: 10px;
-    background-color: $appBackground;
-    
-    display: flex; /* Uses all available space */
-    flex-direction: column;
-    
+    background-color: $settingsBackground;
+    opacity: 0;
+    transform: opacity 0.5s;
+
+    /* TOGGLE VISIBILITY OF SETTINGS MENU     */
     &--visible {
         visibility: visible;
-    }
+        opacity: 1;
+    } 
 
     &__container {
         flex: 1;
@@ -25,17 +24,24 @@
     }
 
     &__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
     }
 
     &__bus-search {
     
         &-form {
-        margin-top: 1rem;
+        margin-top: 3rem;
         font-size: 1.2em;
-
-            & input {
+        margin-bottom: 1rem;
+        
+        
+        & input {
+                width: 80%;
                 outline: none;
+                padding: 0.5rem 0.5rem;
+                border: 1px solid transparent;
+                border-radius: 3px;
             }
         }
 
@@ -43,6 +49,24 @@
             max-height: 300px;
             overflow-y: auto;
         }
+
+        &-stop {
+            margin-bottom: 0.5rem;
+        }
+
+        &-stop:hover {
+            cursor: pointer;
+            color: black;
+        }
+    }
+    
+    &__bus-stop {
+        margin-bottom: 0.5rem;
+    }
+
+    &__bus-stop:hover {
+        cursor: pointer;
+        color: black;
     }
 
 }

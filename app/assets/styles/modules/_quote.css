@@ -1,8 +1,49 @@
 .quote {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    width: 100%;
-    padding: 15rem 2rem;
     font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    /* Center the quote in container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+    &__wrapper {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 19rem;
+        width: 90%;
+        
+        /*
+        border: 1px solid $busBackground;
+        border-radius: 5px;
+        */
+    }
+
+    &__title {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        position: relative;
+        top: -20px;
+        margin-bottom: -20px;
+        left: 20%;
+        opacity: 0.7;
+    }
+    
+
+
+    /*
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 15rem;
+    width: 90%;
+    
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: 1px solid $busNumber;
+    border-radius: 10px;
+    */
 }

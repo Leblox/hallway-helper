@@ -8,51 +8,50 @@
         <section class="container">
             <div class="text-container">
                 <nav>
-                    <ion-icon class="menu__icon" name="settings-sharp"></ion-icon>
+                    <div class="settings-menu__toggle-button">
+                        <ion-icon class="menu__icon settings-menu__toggle-button" name="settings-sharp"></ion-icon>
+                    </div>
                 </nav>
-                <!-- <div class="time">13:25</div> -->
+                <!-- <div class="time"></div> -->
                 <div class="weather">
                     <div class="weather__icon-wrapper">
-                        <ion-icon class="weather__icon" name="sunny-outline"></ion-icon>
+                        <div class="loader">
+                            <svg>
+                                <use href="./assets/images/icons.svg#icon-cw""></use>
+                            </svg>
+                        </div>
                     </div>
                     <p class="weather__text">
-                        <span class="weather__text__temp">32&deg;</span>
+                        <span class="weather__text__temp"></span>
                         <br>
-                        <span class="weather__text__desc">Meteors</span>
+                        <span class="weather__text__desc">Select a bus stop</span>
                     </p>
                 </div>
-                <div class="quote">Whenever we’re afraid, it’s because we don’t know enough. If we understood enough, we would never be afraid
+                <div class="quote__wrapper">
+                    <div class="quote__title">Words of encouragement</div>
+                    <div class="quote"></div>
                 </div>
             </div>
             <div class="arrivals">
-                <div class="arrivals__stop-name">Melville Gardens</div>
+                <div class="arrivals__stop-name"> 
+                </div>
                 <div class="arrivals_busses">
-                    <div class="arrivals__bus">
-                        <div class="arrivals__bus__lineNumber">32</div>
-                        <div class="arrivals__bus__destination">Brent Cross</div>
-                        <div class="arrivals__bus__time">2 minutes</div>
-                    </div>
                 </div>
             </div>
             <div class="settings-menu">
                 <div class="settings-menu__container">
-                    <ion-icon class="menu__icon" name="close-sharp"></ion-icon>
+                    <div class="settings-menu__toggle-button">
+                        <ion-icon class="menu__icon" name="close-sharp"></ion-icon>
+                    </div>
 
                     <h1 class="settings-menu__title">Settings</h1>
                     
                     <form class="settings-menu__bus-search-form">
-                        <input type="text" class="settings-menu__bus-search-form__input" placeholder="Find bus stop...">
-                        <button>Search</button>
+                        <input type="text" class="settings-menu__bus-search-form__input" placeholder=" Find bus stop...">
                     </form>
                     <div class="settings-menu__bus-search-name-results">
-
                     </div>
-
                     <div class="settings-menu__bus-selection">
-                        Which buses would you like to monitor?
-                        <button>All</button>
-                        <div class="select-busses">
-                        </div>
                     </div>
 
 
