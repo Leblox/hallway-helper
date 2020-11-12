@@ -203,6 +203,7 @@ const init = () => {
         controlWeather(localStorage.getItem('lat'), localStorage.getItem('lon'));
     } else {
         // POPULATE DATA IN ADVANCE FOR DEMO PURPOSES
+        console.log('Opening demo station...')
         getBusArrivals('490000173RD');
         controlWeather('51.516964', '-0.14274');
     }
