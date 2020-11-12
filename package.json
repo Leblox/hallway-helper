@@ -7,6 +7,9 @@
     "dev": "webpack-dev-server",
     "build": "webpack"
   },
+  "browserslist": [
+    "since 2017-06"
+  ],  
   "dependencies": {
     "axios": "^0.21.0",
     "babel-loader": "^8.1.0",
