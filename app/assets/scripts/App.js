@@ -195,7 +195,7 @@ const init = () => {
     controlQuote();
     // controlTime();
 
-    // If there is a previously saved ID in localStorage
+    // If there is a previously saved ID in localStorage use it to get the weather data and bus arrivals
     if (localStorage.getItem('id')) {
         console.log('Getting data from local storage')
 
