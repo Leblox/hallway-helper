@@ -7,7 +7,7 @@ export default class Quote {
 
     async getQuote() {
         try {
-            let proxy = "https://cors-anywhere.herokuapp.com/"
+            let proxy = "https://sheltered-spire-77616.herokuapp.com/"
             let result = await axios (`${proxy}https://www.affirmations.dev`);
 
             this.affirmation = result.data.affirmation;
